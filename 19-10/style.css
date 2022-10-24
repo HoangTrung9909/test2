@@ -1,0 +1,74 @@
+body,html{
+    box-sizing: border-box;
+    margin: 0;
+    padding:0;
+} 
+p {
+    margin:  0;
+}
+h1 {
+    color: green;
+    text-align: center;
+}
+
+
+.parent-2 {
+    display: flex;
+    gap: 20px;
+    padding: 0 15px;
+}
+.parent-2 .child {
+    position: relative;
+    width: 33%;
+    height: auto;
+    padding:15px;
+    background-color: grey;
+    border: 2px solid black;
+}
+.parent-2 .child-2 {
+    width: 60px;
+    position: absolute;
+    top:0;
+    right:0;
+    padding: 5px;
+    color: white;
+    background-color: blue;
+    border: 2px solid black;
+    border-top: 0;
+    border-right: 0;
+}
+.parent-2 .text-content {
+    color: white;
+    padding-top:25px;
+
+}
+.parent-2 .child:nth-child(2) .child-2 {
+    background-color: aqua;
+}
+.parent-2 .child:last-child .child-2{
+    background-color: purple;
+}
+@media (max-width: 992px) {
+    .parent-2 {
+        flex-wrap: wrap;
+    }
+    .parent-2 .child {
+        width: calc(50% - 44px);
+
+    }
+    .parent-2 .child:last-child {
+        width: 100%;
+    }
+
+    
+}
+@media (max-width: 576px) {
+    .parent-2 {
+        flex-wrap: wrap;
+    }
+    .parent-2 .child {
+        width: 100%;
+    }
+
+    
+}

@@ -1,0 +1,87 @@
+html, body {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+h1 {
+    text-align: center;
+}
+.p-1{
+    margin: 0;
+   padding: 30px 10px 10px 10px;
+   font-family: 'Times New Roman', Times, serif;
+   
+}
+.p-2{
+    margin: 0;
+    padding: 2px;
+    text-align: center;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+
+}
+.parent-1 {
+    width: 100%;
+    padding: 0 20px;
+}
+
+.parent-2 {
+    width: 100%;
+    box-sizing: 2px solid black;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+}
+
+.child-1 {
+    width: calc(33% - 10px);
+    background-color: rgb(214, 203, 203);
+    position: relative;
+    border: 1px solid black;
+    margin-bottom: 10px;
+    border-radius: 25px;
+   
+}
+
+.child-2 {
+    width: 30%;
+    background-color: bisque;
+    position: absolute;
+    top:0;
+    right: 20px;
+    float: right;
+    border: 1px solid black
+}
+
+@media (max-width: 991px) {
+    .parent-2 {
+        flex-wrap: wrap;
+    }
+    .child-1 {
+        width: calc(50% - 10px);
+    }
+
+    .parent-2 :nth-child(3) {
+        width: 100%;
+    }
+  
+}
+
+@media (max-width: 756px) {
+    .parent-2 {
+        flex-wrap: wrap;
+    }
+    .child-1 {
+        width: 100%;
+    }
+}
+
+.parent-2 .child-1:nth-child(2) .child-2 {
+    background-color: aqua;
+}
+.parent-2 .child-1:last-child .child-2 {
+    background-color: yellow;
+}
